@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+    </script>
+    <style>
+        #container {
+            width: 98%;
+            height: 550px;
+            border: 4px solid red;
+            margin: auto;
+            position: absolute;
+            overflow: hidden;
+        }
+
+
+        .box {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            border-radius: 20px;
+            left: 600px;
+            
+        }
+
+        .box1 {
+            width: 40px;
+            height: 40px;
+            background-color: royalblue;
+            position: absolute;
+            border-radius: 20px;
+            left: 600px;
+        }
+
+        .box2 {
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            position: absolute;
+            border-radius: 20px;
+            left: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="container">
+
+    </div>
+
+
+
+
+
+    <script>
+        let key = setInterval(() => {
+
+            let ball = document.createElement('div');
+            ball.className = 'box';
+            container.appendChild(ball);
+
+            let ball1 = document.createElement('div');
+            ball1.className = 'box1';
+            container.appendChild(ball1);
+
+            let ball2 = document.createElement('div');
+            ball2.className = 'box2';
+            container.appendChild(ball2);
+
+            setInterval(() => {
+
+                ball.style.left = (ball.offsetLeft - 1) + 'px'
+                ball.style.top = (ball.offsetTop + 1) + 'px';
+
+
+
+                ball1.style.left = (ball1.offsetLeft + 1) + 'px'
+                ball1.style.top = (ball1.offsetTop + 1) + 'px';
+
+                ball2.style.top = (ball2.offsetTop + 1) + 'px';
+            }, 1)
+
+
+
+
+
+        }, 500)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
